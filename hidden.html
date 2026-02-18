@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Secret Page</title>
+  <link rel="stylesheet" href="hidden.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="title-block">
+        <h1>Formula 1</h1>
+      </div>
+
+      <button id="themeBtn" class="btn" type="button" aria-pressed="false">
+        Toggle theme
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Congrats! 🎉</h2>
+
+      <p>
+        You have been thorough enough to read the Terms of Service and Privacy Policy
+        (even though they're fake), and you discovered this special secret website!
+      </p>
+
+      <p>
+        Enjoy this amazing photo of fireworks at the end of the Singapore Grand Prix, one of the few night races on the Formula 1 calendar. The Singapore GP is known for its stunning cityscape backdrop and vibrant atmosphere, making it a fan favorite. The fireworks display at the end of the race is a spectacular sight, lighting up the night sky and celebrating the thrilling conclusion of the Grand Prix.
+      </p>
+
+      <div id="photo" class="photo-card">
+        <img src="fireworks.jpg" alt="Fireworks at the Singapore Grand Prix" />
+      </div>
+      <br>
+
+      <button id="surpriseBtn" class="btn" type="button">Show a secret message</button>
+      <p id="secretMsg" class="hidden" aria-hidden="true">
+        🏁 You found the easter egg!!!
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; Formula 1 • Secret Page • Built with HTML, CSS, and JavaScript</p>
+  </footer>
+
+  <script src="hidden.js"></script>
+</body>
+</html>

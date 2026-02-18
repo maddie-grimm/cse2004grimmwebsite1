@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formula 1 Basics</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="title-block">
+        <h1>Formula 1</h1>
+      </div>
+
+      <nav class="site-nav" aria-label="Site navigation">
+        <a href="#teams">Teams and Drivers</a>
+        <a href="#tires">Tires</a>
+        <a href="#circuits">Circuits</a>
+        <a href="#championships">Championships</a>
+        <a href="#signup">Join the Newsletter</a>
+      </nav>
+
+      <button id="themeBtn" class="btn" type="button" aria-pressed="false">
+        Toggle theme
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-text">
+        <h2>What is F1?</h2>
+        <p>
+          Formula 1 (F1) is the highest class of international, open-wheel, single-seater auto racing, sanctioned by the FIA. It features 11 teams and 22 drivers competing in races worldwide, running from March to December. F1 is known as the pinnacle of motorsport, combining cutting-edge engineering, extreme speed, and intense, year-long championship battles.
+        </p>
+        <p>
+          Drivers compete for the F1 Drivers’ Championship, while the teams fight for the F1 Teams’ Championship and prize money based on their position at the end of the season.
+        </p>
+        <p>
+          Each race is known as a Grand Prix, and they’re held in incredible locations around the world. The 2026 Formula 1 calendar features 24 Grand Prix race weekends.
+        </p>
+      </div>
+
+      <figure class="hero-figure">
+        <img src="ferraricars.webp" alt="Ferrari F1 cars racing down the track"/>
+        <figcaption>Ferrari F1 cars racing down the track</figcaption>
+      </figure>
+    </section>
+
+    <!-- TEAMS -->
+    <section id="teams" class="card">
+      <h2>Teams and Drivers</h2>
+      <p>
+        The 2026 season includes eleven teams, and each team has two race drivers. Teams earn points
+        whenever either driver finishes within the top ten positions, which contributes to the Constructors’ Championship. Driver lineups are constantly changing across seasons, and drivers even have the potential to switch teams mid-season.
+      </p>
+
+      <div class="controls">
+        <label for="teamSelect">Jump to a team:</label>
+        <select id="teamSelect" name="teamSelect">
+            <option value="all">Show all</option>
+            <option value="mclaren">McLaren</option>
+            <option value="ferrari">Ferrari</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="redbull">Red Bull Racing</option>
+            <option value="racingbulls">Racing Bulls</option>
+            <option value="astonmartin">Aston Martin</option>
+            <option value="alpine">Alpine</option>
+            <option value="williams">Williams</option>
+            <option value="haas">Haas</option>
+            <option value="audi">Audi</option>
+            <option value="cadillac">Cadillac</option>
+        </select>
+
+        <button id="toggleDriversBtn" class="btn" type="button">Hide driver list</button>
+      </div>
+      
+      <div class="team-grid">
+        <!-- Row 1 (4) -->
+         <article class="team team--mclaren" data-team="mclaren">
+            <h3>McLaren</h3>
+            <ul class="drivers">
+            <li>Lando Norris</li>
+            <li>Oscar Piastri</li>
+            </ul>
+        </article>
+
+        <article class="team team--ferrari" data-team="ferrari">
+            <h3>Ferrari</h3>
+            <ul class="drivers">
+            <li>Charles Leclerc</li>
+            <li>Lewis Hamilton</li>
+            </ul>
+        </article>
+
+        <article class="team team--mercedes" data-team="mercedes">
+            <h3>Mercedes</h3>
+            <ul class="drivers">
+            <li>George Russell</li>
+            <li>Kimi Antonelli</li>
+            </ul>
+        </article>
+
+        <article class="team team--redbull" data-team="redbull">
+            <h3>Red Bull Racing</h3>
+            <ul class="drivers">
+            <li>Max Verstappen</li>
+            <li>Isack Hadjar</li>
+            </ul>
+        </article>
+
+        <!-- Row 2 (4) -->
+        <article class="team team--racingbulls" data-team="racingbulls">
+            <h3>Racing Bulls</h3>
+            <ul class="drivers">
+            <li>Liam Lawson</li>
+            <li>Arvid Lindblad</li>
+            </ul>
+        </article>
+
+        <article class="team team--astonmartin" data-team="astonmartin">
+            <h3>Aston Martin</h3>
+            <ul class="drivers">
+            <li>Fernando Alonso</li>
+            <li>Lance Stroll</li>
+            </ul>
+        </article>
+
+        <article class="team team--alpine" data-team="alpine">
+            <h3>Alpine</h3>
+            <ul class="drivers">
+            <li>Pierre Gasly</li>
+            <li>Franco Colapinto</li>
+            </ul>
+        </article>
+
+        <article class="team team--williams" data-team="williams">
+            <h3>Williams</h3>
+            <ul class="drivers">
+            <li>Carlos Sainz</li>
+            <li>Alexander Albon</li>
+            </ul>
+        </article>
+        
+        <div class="team-row-last">
+            <article class="team team--haas" data-team="haas">
+            <h3>Haas</h3>
+            <ul class="drivers">
+                <li>Esteban Ocon</li>
+                <li>Oliver Bearman</li>
+            </ul>
+            </article>
+
+            <article class="team team--audi" data-team="audi">
+            <h3>Audi</h3>
+            <ul class="drivers">
+                <li>Nico Hülkenberg</li>
+                <li>Gabriel Bortoleto</li>
+            </ul>
+            </article>
+
+            <article class="team team--cadillac" data-team="cadillac">
+            <h3>Cadillac</h3>
+            <ul class="drivers">
+                <li>Sergio Pérez</li>
+                <li>Valtteri Bottas</li>
+            </ul>
+            </article>
+        </div>
+    </div>
+
+    </div>
+    </section>
+
+    <section id="tires" class="card">
+        <h2>Tires and Compounds (C1–C6)</h2>
+
+        <p>
+            F1 uses different tire compounds so teams can choose between speed and durability during a race. In general, <strong>softer tires</strong> have more grip on the track and yield faster lap times, but wear out quicker, while <strong>harder tires</strong> last longer but usually have less grip on the track.
+        </p>
+
+        <p>
+            In Formula 1, tire strategy is one of the most important strategic elements during a race. Teams must decide when to pit for new tires and which compounds to use based on track conditions, weather, and their car’s performance. The choice of tire can significantly impact a driver’s lap times and overall race.
+        </p>
+
+        <p>
+            In the 2026 season, Pirelli is the official tire supplier for Formula 1, and they provide teams with a range of compounds labeled from C1 to C6. C1 is the hardest compound, while C6 is the softest. Each Grand Prix has specific rules about which compounds must be used during the race, and teams often have to make strategic decisions about when to switch between them to optimize their performance. The key for the six different compounds is listed below.
+        </p>
+
+        <ol>
+            <li><strong>C1</strong> – the hardest compound (very durable, lower grip)</li>
+            <li><strong>C2</strong> – hard compound (durable with a bit more grip than C1)</li>
+            <li><strong>C3</strong> – balanced “middle” option (common choice at many tracks)</li>
+            <li><strong>C4</strong> – soft compound (good grip, wears faster)</li>
+            <li><strong>C5</strong> – very soft (high grip, shorter life)</li>
+            <li><strong>C6</strong> – the softest compound (maximum grip, fastest wear)</li>
+        </ol>
+    </section>
+
+    <!-- CIRCUITS -->
+    <section id="circuits" class="card">
+      <h2>Race Circuits</h2>
+      <p>
+        A Formula 1 circuit is a specialized, FIA-certified Grade 1 racing track designed for the highest level of open-wheel motorsport. These venues, comprising both purpose-built, permanent racetracks and closed city streets, feature complex, high-speed layouts designed to test car performance and driver skill.
+      </p>
+      <a href="https://www.formula1.com/en/racing/2025" target="_blank" rel="noopener noreferrer">Formula 1 2026 Circuit Race Calendar</a>
+      <br><br>
+
+      <h3>2026 Circuit Table of Contents</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Country</th>
+            <th>Location</th>
+            <th>Offical Name</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+            <tr><td>Australia</td><td>Melbourne</td><td>Albert Park Circuit</td></tr>
+            <tr><td>China</td><td>Shanghai</td><td>Shanghai International Circuit</td></tr>
+            <tr><td>Japan</td><td>Suzuka</td><td>Suzuka Circuit</td></tr>
+            <tr><td>Bahrain</td><td>Sakhir</td><td>Bahrain International Circuit</td></tr>
+            <tr><td>Saudi Arabia</td><td>Jeddah</td><td>Jeddah Corniche Circuit</td></tr>
+            <tr><td>USA</td><td>Miami</td><td>Miami International Autodrome</td></tr>
+            <tr><td>Canada</td><td>Montreal</td><td>Circuit Gilles Villeneuve</td></tr>
+            <tr><td>Monaco</td><td>Monaco</td><td>Circuit de Monaco</td></tr>
+            <tr><td>Spain</td><td>Barcelona-Catalunya</td><td>Circuit de Barcelona-Catalunya</td></tr>
+            <tr><td>Austria</td><td>Spielberg</td><td>Red Bull Ring</td></tr>
+            <tr><td>Great Britain</td><td>Silverstone</td><td>Silverstone Circuit</td></tr>
+            <tr><td>Belgium</td><td>Spa-Francorchamps</td><td>Circuit de Spa-Francorchamps</td></tr>
+            <tr><td>Hungary</td><td>Budapest</td><td>Hungaroring</td></tr>
+            <tr><td>Netherlands</td><td>Zandvoort</td><td>Circuit Zandvoort</td></tr>
+            <tr><td>Italy</td><td>Monza</td><td>Autodromo Nazionale Monza</td></tr>
+            <tr><td>Spain</td><td>Madrid</td><td>Madrid (new circuit)</td></tr>
+            <tr><td>Azerbaijan</td><td>Baku</td><td>Baku City Circuit</td></tr>
+            <tr><td>Singapore</td><td>Singapore</td><td>Marina Bay Street Circuit</td></tr>
+            <tr><td>USA</td><td>Austin</td><td>Circuit of the Americas</td></tr>
+            <tr><td>Mexico</td><td>Mexico City</td><td>Autódromo Hermanos Rodríguez</td></tr>
+            <tr><td>Brazil</td><td>Sao Paulo</td><td>Interlagos</td></tr>
+            <tr><td>USA</td><td>Las Vegas</td><td>Las Vegas Strip Circuit</td></tr>
+            <tr><td>Qatar</td><td>Lusail</td><td>Lusail International Circuit</td></tr>
+            <tr><td>Abu Dhabi</td><td>Yas Marina</td><td>Yas Marina Circuit</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- CHAMPIONSHIPS -->
+    <section id="championships" class="card">
+      <h2>World Drivers’ and Constructors’ Championships</h2>
+      <p>
+        The Formula 1 World Championship is the premier annual, global competition for open-wheel racing, organized by the FIA. It awards two titles, the World Drivers’ Championship (WDC) for the most successful driver, and the World Constructors’ Championship (WCC) for the best-performing team, based on accumulated points from Grands Prix throughout the season.
+      </p>
+      
+      <p>
+        Points are awarded based on finishing position in each race, with the winner receiving 25 points, second place 18 points, third place 15 points, and so on down to 10th place, which receives 1 point.
+      </p>
+
+      <p>
+        The WDC is highly prestigious and often more celebrated by fans, while the WCC is crucial for teams as it reflects their overall performance and determines prize money distribution. Both championships are fiercely contested, with strategy, consistency, and reliability playing key roles in determining the season’s champions. 
+      </p>
+
+      <p>
+        The standings for both the <a href="https://www.formula1.com/en/results/2026/drivers" target="_blank" rel="noopener noreferrer"> World Drivers' Championship (WDC)</a> and the <a href="https://www.formula1.com/en/results/2026/team" target="_blank" rel="noopener noreferrer"> World Constructors' Championship (WCC)</a> are updated after each Grand Prix on the offical Formula 1 website. The standings can change dramatically as the season progresses, especially in the final races when the championship rankings are often the closest.
+      </p>
+    </section>
+
+    <!-- FORM -->
+    <section id="signup" class="card signup-card">
+      <h2>Join the Newsletter</h2>
+
+      <form id="signupForm">
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="First Last" required />
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="email@example.com" required />
+        </div>
+        
+        <div class="form-row">
+            <label for="favorite">If you could attend a race at any track, which one would you choose?</label>
+            <select id="favorite" name="favorite">
+                <option value="">Select a circuit...</option>
+                
+                <option value="australia">Australian GP — Albert Park (Melbourne)</option>
+                <option value="china">Chinese GP — Shanghai International Circuit</option>
+                <option value="japan">Japanese GP — Suzuka Circuit</option>
+                <option value="bahrain">Bahrain GP — Bahrain International Circuit</option>
+                <option value="saudi">Saudi Arabian GP — Jeddah Corniche Circuit</option>
+                <option value="miami">Miami GP — Miami International Autodrome</option>
+                <option value="canada">Canadian GP — Circuit Gilles Villeneuve</option>
+                <option value="monaco">Monaco GP — Circuit de Monaco</option>
+                <option value="spain-barcelona">Spanish GP — Barcelona-Catalunya</option>
+                <option value="austria">Austrian GP — Red Bull Ring</option>
+                <option value="britain">British GP — Silverstone Circuit</option>
+                <option value="belgium">Belgian GP — Spa-Francorchamps</option>
+                <option value="hungary">Hungarian GP — Hungaroring</option>
+                <option value="netherlands">Dutch GP — Zandvoort</option>
+                <option value="italy">Italian GP — Monza</option>
+                <option value="spain-madrid">Madrid GP — Madrid (new circuit)</option>
+                <option value="azerbaijan">Azerbaijan GP — Baku City Circuit</option>
+                <option value="singapore">Singapore GP — Marina Bay Street Circuit</option>
+                <option value="usa-austin">United States GP — Circuit of the Americas</option>
+                <option value="mexico">Mexico City GP — Autódromo Hermanos Rodríguez</option>
+                <option value="brazil">São Paulo GP — Interlagos</option>
+                <option value="lasvegas">Las Vegas GP — Las Vegas Strip Circuit</option>
+                <option value="qatar">Qatar GP — Lusail International Circuit</option>
+                <option value="abudhabi">Abu Dhabi GP — Yas Marina Circuit</option>
+            </select>
+        </div>
+
+        <div class="form-row">
+          <label class="checkbox">
+            <input id="agree" name="agree" type="checkbox" required />
+            I consent to the <a href="hidden.html" target="_blank">Terms of Service and Privacy Policy</a> and receiving promotional emails about Formula 1 news and updates
+          </label>
+        </div>
+
+        <button class="btn" type="submit">Submit</button>
+        <p id="formMessage" class="form-message" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; Formula 1 • 2026 Website 1 • Built with HTML, CSS, and JavaScript</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

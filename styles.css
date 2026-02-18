@@ -1,0 +1,400 @@
+/* ===== CSS RESET (simple) ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  line-height: 1.5;
+}
+
+/* ===== THEME VARIABLES ===== */
+:root {
+  --bg: #f7f7fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #5b6472;
+  --accent: #d90429; /* F1-ish red */
+  --border: #e6e6ef;
+}
+
+body.dark {
+  --bg: #0f1220;
+  --card: #171a2c;
+  --text: #eef0ff;
+  --muted: #b7bbd6;
+  --accent: #ff3355;
+  --border: #2a2f4a;
+}
+
+/* ===== PAGE BASE ===== */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  width: min(1000px, 92%);
+  margin: 0 auto;
+  padding: 1.25rem 0 2rem;
+}
+
+/* ===== HEADER / NAV (flexbox) ===== */
+.site-header {
+  border-bottom: 1px solid var(--border);
+  background: var(--card);
+}
+
+.header-inner {
+  width: min(1000px, 92%);
+  margin: 0 auto;
+  padding: 1rem 0;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title-block h1 {
+  font-size: 1.6rem;
+}
+
+.site-nav {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: var(--text);
+  padding: 0.35rem 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.site-nav a:hover {
+  background: var(--bg);
+}
+
+/* ===== BUTTON ===== */
+.btn {
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.6rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--accent);
+  color: white;
+}
+
+#signupForm button.btn {
+  display: block;
+  margin: 1rem auto 0;
+  width: 100%;
+}
+
+/* ===== HERO ===== */
+.hero {
+  display: flex;
+  gap: 1.25rem;
+  align-items: stretch;
+  margin-top: 1.25rem;
+  padding: 1rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+}
+
+.hero-text h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.hero-text p {
+  margin: 0.6rem 0;
+  color: var(--text);
+}
+
+.link-row {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 0.75rem;
+}
+
+.link {
+  color: var(--accent);
+}
+
+.hero-figure {
+  width: 320px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.hero-figure img {
+  border-radius: 0.75rem;
+  border: 1px solid var(--border);
+  height: 210px;
+}
+
+.hero-figure figcaption {
+  margin-top: 0.4rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* ===== CARDS ===== */
+.card {
+  margin-top: 1.25rem;
+  padding: 1rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+}
+
+.card h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  margin: 0.6rem 0;
+}
+
+.note {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* ===== TEAMS ===== */
+.controls {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0.75rem 0 1rem;
+}
+
+.controls label {
+  color: var(--muted);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.team-row-last {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+
+.team-row-last .team {
+  flex: 0 0 calc((100% - 3rem) / 4);
+}
+
+.team {
+  flex: 1 1 220px;
+  border: 1px solid var(--border);
+  border-radius: 0.85rem;
+  padding: 0.75rem;
+}
+
+.team h3 {
+  margin-bottom: 0.4rem;
+  font-weight: bold;
+}
+
+/* Team name colors (approx “main” brand colors) */
+.team--mclaren h3      { color: #ff8000; }  /* papaya */
+.team--ferrari h3      { color: #dc0000; }  /* ferrari red */
+.team--mercedes h3     { color: #00d2be; }  /* mercedes teal */
+.team--redbull h3      { color: #1e41ff; }  /* red bull blue */
+.team--racingbulls h3  { color: #2b5cff; }  /* strong blue */
+.team--astonmartin h3  { color: #006f62; }  /* aston green */
+.team--alpine h3       { color: #0090ff; }  /* alpine blue */
+.team--williams h3     { color: #005aff; }  /* williams blue */
+.team--haas h3         { color: #9aa0a6; }  /* haas gray */
+.team--audi h3         { color: #111111; }  /* audi black */
+.team--cadillac h3     { color: #002d72; }  /* cadillac deep blue */
+
+.team ul {
+  padding-left: 1.1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ===== LISTS / TABLE ===== */
+ol {
+  padding-left: 1.25rem;
+  margin: 0.5rem 0 0.75rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.75rem;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  border: 1px solid var(--border);
+}
+
+th, td {
+  text-align: left;
+  padding: 0.7rem;
+  border-bottom: 1px solid var(--border);
+}
+
+th {
+  background: var(--bg);
+}
+
+/* ===== FORM ===== */
+form {
+  margin-top: 0.75rem;
+}
+
+.form-row {
+  margin-bottom: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+input, select {
+  padding: 0.55rem 0.6rem;
+  border-radius: 0.6rem;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+}
+
+.checkbox {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  color: var(--muted);
+}
+
+.form-message {
+  margin-top: 0.75rem;
+  color: var(--accent);
+}
+
+/* ===== FOOTER ===== */
+.site-footer {
+  border-top: 1px solid var(--border);
+  margin-top: 1.5rem;
+  padding: 1rem 0;
+  text-align: center;
+  color: var(--muted);
+}
+
+/* ===== RESPONSIVE DESIGN (Small Screens) ===== */
+@media (max-width: 768px) {
+
+  /* ===== HEADER ===== */
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .site-nav {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  /* ===== HERO SECTION ===== */
+  .hero {
+    flex-direction: column;
+  }
+
+  .hero-figure {
+    width: 100%;
+  }
+
+  .hero-figure img {
+    width: 100%;
+  }
+
+  /* ===== TEAM GRID ===== */
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Make bottom 3 behave normally on small screens */
+  .team-row-last {
+    justify-content: stretch;
+    flex-wrap: wrap;
+  }
+
+  .team-row-last .team {
+    flex: 1 1 calc((100% - 1rem) / 2);
+  }
+
+  /* ===== TABLE ===== */
+  table {
+    font-size: 0.85rem;
+  }
+
+  th, td {
+    padding: 0.5rem;
+  }
+
+  /* ===== FORM ===== */
+  #signupForm {
+    width: 100%;
+  }
+
+  #signupForm input,
+  #signupForm select {
+    font-size: 0.95rem;
+  }
+
+  #signupForm button.btn {
+    font-size: 0.95rem;
+  }
+
+  /* ===== GENERAL TEXT ===== */
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  /* Add slight spacing for cards */
+  .card {
+    padding: 0.85rem;
+  }
+}
